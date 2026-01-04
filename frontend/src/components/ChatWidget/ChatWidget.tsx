@@ -19,7 +19,9 @@ interface ChatWidgetProps {
 }
 
 const ChatWidget: React.FC<ChatWidgetProps> = ({
-  apiUrl = 'http://localhost:8000'
+  apiUrl = process.env.NODE_ENV === 'production'
+    ? 'https://physical-ai-and-humanoid-robotic.vercel.app'
+    : 'http://localhost:8000'
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);

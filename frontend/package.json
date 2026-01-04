@@ -5,6 +5,7 @@
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "vercel-build": "docusaurus build",
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
