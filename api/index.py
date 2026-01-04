@@ -1,5 +1,5 @@
 """
-Vercel Serverless API for chatbot
+Vercel Serverless API for chatbot backend
 """
 import os
 import sys
@@ -12,6 +12,6 @@ sys.path.insert(0, backend_path)
 # Import FastAPI app
 from main import app
 
-# Vercel handler
-def handler(request, context):
-    return app(request, context)
+# Vercel handler - standard for Python serverless
+def handler(event, context):
+    return app(event, context)

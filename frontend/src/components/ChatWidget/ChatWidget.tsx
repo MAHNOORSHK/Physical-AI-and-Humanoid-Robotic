@@ -23,6 +23,9 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({
     ? 'https://physical-ai-and-humanoid-robotic.vercel.app'
     : 'http://localhost:8000'
 }) => {
+
+  // Add welcome message for Vercel deployment
+  const isVercel = apiUrl.includes('vercel.app');
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
